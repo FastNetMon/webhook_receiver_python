@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
-import SocketServer
+import socketserver
 import random
 import socket
 
@@ -22,11 +22,11 @@ class S(BaseHTTPRequestHandler):
         
     def do_POST(self):
         self._set_headers()
-        print "in post method"
+        print("in post method")
         self.data_string = self.rfile.read(int(self.headers['Content-Length']))
         self.send_response(200)
         self.end_headers()
-        print "Got POST data: " + self.data_string
+        print("Got POST data: " + self.data_string)
         #data = simplejson.loads(self.data_string)
         #with open("test123456.json", "w") as outfile:
         #    simplejson.dump(data, outfile)
@@ -42,7 +42,7 @@ class HTTPServerV6(HTTPServer):
 def run(server_class=HTTPServer, handler_class=S, port=8080):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    print 'Starting httpd...'
+    print('Starting httpd...')
     httpd.serve_forever()
     
 if __name__ == "__main__":
