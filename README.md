@@ -8,7 +8,7 @@ wget https://raw.githubusercontent.com/FastNetMon/webhook_receiver_python/main/f
 
 And run it this way:
 ```
-python fastnetmon_webhook_receiver_server.py 8080
+python3 fastnetmon_webhook_receiver_server.py 8080
 ```
 
 And enable FastNetMon’s feature:
