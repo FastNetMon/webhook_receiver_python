@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
@@ -26,7 +26,7 @@ class S(BaseHTTPRequestHandler):
         self.data_string = self.rfile.read(int(self.headers['Content-Length']))
         self.send_response(200)
         self.end_headers()
-        print("Got POST data: " + self.data_string)
+        print("Got POST data: " + str(self.data_string))
         #data = simplejson.loads(self.data_string)
         #with open("test123456.json", "w") as outfile:
         #    simplejson.dump(data, outfile)
