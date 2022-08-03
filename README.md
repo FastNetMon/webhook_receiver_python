@@ -1,4 +1,4 @@
-This page provides example code for HTTP web server implemented in Python to test web_hook capability in FastNetMon and return all data received from FastNetMon.
+This page provides example code for HTTP web server implemented in Python to test [web_hook capability](https://fastnetmon.com/docs-fnm-advanced/example-web-hook-receiver-for-fastnetmon-advanced/) in FastNetMon and return all data received from FastNetMon.
 
 Please put following code to file fastnetmon_webhook_receiver_server.py:
 ```
